@@ -42,7 +42,9 @@ async function sendEmail(payload) {
     replyTo: email,
   };
 
+
   try {
+
     await transporter.sendMail(mailOptions);
     return true;
   } catch (error) {
