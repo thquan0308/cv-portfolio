@@ -19,15 +19,8 @@ function ProjectCard({ project }) {
                 </p>
             </div>
             <div
-                className="overflow-hidden border-t-[2px] border-indigo-900 px-4 lg:px-8 py-4 lg:py-8"
-                style={{
-                    border: "1px solid red",
-                    backgroundImage: `url(${project.demo})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundBlendMode: "overlay",
-                    backgroundColor: "#161424",
-                }}
+                className=" bg-[#161424] bg-cover bg-center bg-blend-overlay"
+                style={{ backgroundImage: `url(${project.demo})` }}
             >
                 <code className="font-mono text-xs md:text-sm lg:text-base">
                     <div className="blink">
