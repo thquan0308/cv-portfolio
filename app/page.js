@@ -9,7 +9,6 @@ import HeroSection from "./components/homepage/hero-section";
 import Projects from "./components/homepage/projects";
 import Skills from "./components/homepage/skills";
 import { useEffect, useState } from "react";
-import { Suspense } from "react";
 
 async function getData() {
   const res = await fetch(`https://dev.to/api/articles?username=${personalData.devUsername}`);
@@ -37,8 +36,6 @@ export default function Home() {
       <Projects />
       <Education />
       <ContactSection />
-      <Suspense fallback={<>Loading...</>}></Suspense>
-
     </div>
   );
 }
