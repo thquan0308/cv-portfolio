@@ -23,5 +23,8 @@ module.exports = {
       },
     ],
   },
-  output: "standalone", // Thêm dòng này
+  base: "/cv-portfolio", // Thêm dòng này
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+  },
 };
