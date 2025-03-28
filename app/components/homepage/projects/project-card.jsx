@@ -19,7 +19,7 @@ function ProjectCard({ project }) {
                 </p>
             </div>
             <div
-                className=" bg-[#161424] bg-cover bg-center bg-blend-overlay"
+                className="border bg-[#161424] bg-cover bg-center bg-blend-overlay"
                 style={{ backgroundImage: `url(${project.demo})` }}
             >
                 <code className="font-mono text-xs md:text-sm lg:text-base">
