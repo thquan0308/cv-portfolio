@@ -56,24 +56,25 @@ async function sendEmail(payload) {
 export async function POST(request) {
   try {
     const payload = await request.json();
+    console.log("Received payload:", payload);
+
     const emailSuccess = await sendEmail(payload);
+    console.log("Email send status:", emailSuccess);
 
-    if (emailSuccess) {
-      return NextResponse.json(
-        { success: true, message: "Email sent successfully!" },
-        { status: 200 }
-      );
-    }
+    return NextResponse.json({
+      success: emailSuccess,
+      message: emailSuccess ? "Email sent successfully!" : "Failed to send email.",
+      debug_payload: payload,  // Thêm log vào API response
+    }, { status: emailSuccess ? 200 : 500 });
 
-    return NextResponse.json(
-      { success: false, message: "Failed to send email." },
-      { status: 500 }
-    );
   } catch (error) {
-    console.error("API Error:", error.message);
-    return NextResponse.json(
-      { success: false, message: "Server error occurred." },
-      { status: 500 }
-    );
+    console.error("API Error:", error);
+    return NextResponse.json({
+      success: false,
+      message: "Server error occurred.",
+      error: error.message, // Trả lỗi về frontend
+    }, { status: 500 });
   }
 }
+
+

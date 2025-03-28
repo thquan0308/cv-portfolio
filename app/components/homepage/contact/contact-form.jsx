@@ -35,10 +35,11 @@ function ContactForm() {
 
         try {
             setIsLoading(true);
-            const res = await axios.post(
-                "https://thquan.netlify.app/api/contact",
-                userInput
-            );
+
+            const apiUrl = process.env.NEXT_PUBLIC_APP_URL + "/api/contact"; // Sử dụng URL từ biến môi trường
+
+            console.log("📤 Sending data to:", apiUrl); // Log URL để kiểm tra
+            const res = await axios.post(apiUrl, userInput);
 
             toast.success("Message sent successfully!");
             setUserInput({
