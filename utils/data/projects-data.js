@@ -1,7 +1,7 @@
 export const projectsData = [
     {
         id: 1,
-        name: 'Website Clinie Management And Scheduling',
+        name: 'Website Clinic Management And Scheduling',
         description: "Developed a user-friendly interface to help patients easily schedule appointments and manage personal information. Implemented an automatic email confirmation system after successful appointment booking. Built an admin page to manage appointments, patient information, doctors, and specialties. Supported user role management for administrators, doctors, and patients. Provided functionality to view medical history and examination results. Managed specialty and doctor information for each clinic.",
         tools: ["React",
             "Vite",
