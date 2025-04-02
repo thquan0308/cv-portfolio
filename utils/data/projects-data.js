@@ -49,5 +49,25 @@ export const projectsData = [
         role: 'Full Stack Developer',
         demo: '/png/quiz.png',
     },
+    {
+        "id": 4,
+        "name": "Shoe Store Website",
+        "description": "An e-commerce website for managing a shoe store, allowing users to browse products, place orders, and manage customer information. Integrated email notifications for order confirmations. Utilized Hibernate for database management and deployed on Tomcat.",
+        "tools": [
+            "Java EE",
+            "Spring Boot",
+            "Hibernate",
+            "MSSQL",
+            "Apache Tomcat",
+            "JSTL",
+            "Maven",
+            "Log4j",
+            "Apache POI",
+            "Jakarta Mail"
+        ],
+        "role": "Fullstack Developer",
+        "code": "https://github.com/thquan0308/shoe-ecommerce-website",
+        "demo": "/png/shoe.png"
+    }
 
 ];

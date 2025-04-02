@@ -10,9 +10,19 @@ import { RiContactsFill } from "react-icons/ri";
 import { SiInstagram } from "react-icons/si";
 import { TypeAnimation } from "react-type-animation";
 import "./index.css";
+import TrueFocus from "../../TrueFocus";
+
 function HeroSection() {
     return (
         <section className="relative flex flex-col items-center justify-between py-4 lg:py-12">
+            <TrueFocus
+                sentence="PORT FOLIO"
+                manualMode={false}
+                blurAmount={5}
+                borderColor="#16f2b3"
+                animationDuration={1}
+                pauseBetweenAnimations={0.5}
+            />
             <Image
                 src="/hero.svg"
                 alt="Hero"
@@ -21,7 +31,7 @@ function HeroSection() {
                 className="absolute -top-[98px] -z-10"
             />
 
-            <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-12 gap-y-8">
+            <div className="grid grid-cols-1 items-start lg:grid-cols-2 lg:gap-12 gap-y-8 mt-6">
                 <div className="order-2 lg:order-1 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:pt-10">
                     <h1 className="text-3xl font-bold leading-10 text-white md:font-extrabold lg:text-[1.6rem] lg:leading-[3.5rem]">
                         <span
